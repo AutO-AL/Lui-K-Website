@@ -315,63 +315,43 @@ h1 {
   color: #fde68a;
 }
 
-.social-carousel {
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: rgba(11, 31, 73, 0.45);
-  padding: 0.9rem 0;
+.social-inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+  padding: 0.3rem 0;
 }
 
-.social-track {
-  position: relative;
-  width: 100%;
-  height: 4.2rem;
+#socials .icon-link,
+#socials .icon-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
 }
 
-#socials .icon-link {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 3.8rem;
-  height: 3.8rem;
-  color: var(--text);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-  transform: translate3d(0, -50%, 0);
-}
-
-#socials .icon-link img {
-  width: 2.2rem;
-  height: 2.2rem;
+#socials img {
+  width: 2rem;
+  height: 2rem;
   display: block;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
 }
 
-#socials .icon-instagram {
-  background: linear-gradient(135deg, #f58529 0%, #dd2a7b 45%, #515bd4 100%);
+#socials .icon-link {
+  opacity: 0.95;
+  transition: transform 180ms ease, opacity 180ms ease;
 }
 
-#socials .icon-soundcloud {
-  background: linear-gradient(135deg, #ff8800 0%, #ff3300 100%);
-}
-
-#socials .icon-applemusic {
-  background: linear-gradient(135deg, #fa233b 0%, #fb5c74 100%);
-}
-
-#socials .icon-spotify {
-  background: #1ed760;
-}
-
-#socials .icon-bandcamp {
-  background: #3d8abf;
+#socials .icon-link:hover {
+  opacity: 1;
+  transform: translateY(-2px);
 }
 
 #socials .icon-placeholder {
-  pointer-events: none;
-  opacity: 0.95;
+  opacity: 0.7;
 }
 
 .reveal {
